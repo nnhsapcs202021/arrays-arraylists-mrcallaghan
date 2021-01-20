@@ -5,7 +5,7 @@
  * @author mrcallaghan
  * @version 20jan2021
  */
-public class ArrayNotes
+public class ArrayNotes7
 {
     public static void createArrayOfEvens()
     {
@@ -13,13 +13,13 @@ public class ArrayNotes
          * An array is an ordered collection of elements of the same type. The type can be a primitive
          *      type (e.g., int) or a class (e.g., Turtle).
          *      
-         * An array varaible is like an object variable in that it must be declared and initialized.
-         * 
-         * The number in the square brackets (i.e., []) specifies the number of elements in the array.
-         * 
-         * All elements in the array are initialized to their default values (e.g. 0, false, null).
-         * 
-         * This code creates an array that contains 10 int values (all 0 to begin).
+         *      An array varaible is like an object variable in that it must be declared and initialized.
+         *      
+         *      The number in the square brackets (i.e., []) specifies the number of elements in the array.
+         *      
+         *      All elements in the array are initialized to their default values (e.g. 0, false, null).
+         *      
+         *      This code creates an array that contains 10 int values (all 0 to start).
          */
         int[] evens = new int[10];
         
@@ -31,12 +31,12 @@ public class ArrayNotes
          * Square brackets are used to reference a specific element in the array based on its index.
          *      Indicies are zero based.
          */
-        for (int i = 0; i < evens.length; i++)
+        for(int i = 0; i < evens.length; i++)
         {
-            evens[i] = (i + 1) * 2;
+            evens[i] = (i +1) * 2;
         }
         
-        // print the reference to the array
+        //prints the reference to the array
         System.out.println(evens);
         
         for(int i = 0; i < evens.length; i++)
@@ -44,7 +44,6 @@ public class ArrayNotes
             System.out.println(i + ": " + evens[i]);
         }
         
-    
     }
     
     public static void createArrayOfOdds()
@@ -66,6 +65,7 @@ public class ArrayNotes
         for(int i = 0; i <= odds.length; i++)
         {
             //System.out.println(i + ": " + odds[i]);
+            
         }
         
         /*
@@ -74,14 +74,15 @@ public class ArrayNotes
          * Variables of type array, contain a reference to the array stored in the computer's memory.
          * 
          * Assigning one array variable's value to another, copies the reference, not the array's
-         *      elements.
+         *      elements.         
          */
+        
         int[] moreOdds = odds;
         odds[2] = 6;
-        System.out.println(moreOdds[2]);  //print? 6
+        System.out.println(moreOdds[2]); // print? 6
         
         /*
-         * Enhanced For Loop
+         * Enhanced for loops
          * 
          *  Iterates over the elements in an array.
          *  Similar to the "for value in ..." structure in Python.
@@ -94,10 +95,10 @@ public class ArrayNotes
         /*
          * Limitations of Enhanced for Loops
          * 
-         *  The local variable (e.g. odd) contains a copy of the value of the element in the array.
-         *  
-         *  We cannot modify the elements in the array.
-         *  We cannot easily determine the index of an element.
+         * The local variable (e.g. odd) contains a copy of the value of the element in the array.
+         * 
+         * We cannot modify the elements in the array.
+         * We cannot easily determine the index of an element.
          */
         
         for(int odd : odds)
@@ -109,8 +110,6 @@ public class ArrayNotes
         {
             System.out.println(odd);
         }
-        
-        
     }
     
     
