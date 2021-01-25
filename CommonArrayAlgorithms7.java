@@ -67,7 +67,7 @@ public class CommonArrayAlgorithms7
      */
     public static void printElementSeparators()
     {
-        int[] randomArray= CommonArrayAlgorithms.createRandomArray(5, 5);
+        int[] randomArray= createRandomArray(5, 5);
         System.out.print(randomArray[0]);
 
         for (int i = 1; i<=randomArray.length-1; i++){

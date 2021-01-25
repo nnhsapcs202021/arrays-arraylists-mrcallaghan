@@ -1,3 +1,4 @@
+import java.util.GregorianCalendar;
 
 /**
  * Write a description of class Notes here.
@@ -52,7 +53,7 @@ public class ArrayNotes
         /*
          * An array literal (i.e., curly brackets and comma-separated values) can be used to
          *      initialize an array. The size of the array is inferred based on the number
-         *		of elements in the literal.
+         *      of elements in the literal.
          */
         int[] odds = new int[] {1,3,5,7,9,11,13,15,17,19};
         
@@ -111,6 +112,39 @@ public class ArrayNotes
         }
         
         
+    }
+    
+    public static void createArrayOfCalendars()
+    {
+        /*
+         * Create an array of 12 calendars, each calendar initialized to the start of each month.
+         * 
+         * When we create an array of objects, each element is initialized to null. We have to
+         *      explicitly create new objects and assign to each element.
+         */
+        
+        GregorianCalendar[] calendars = new GregorianCalendar[12];
+        
+        /*
+         * At this point, every element in the array has a value of null.
+         */
+        for(GregorianCalendar calendar : calendars)
+        {
+            System.out.println(calendar);
+        }
+        
+        /*
+         * Create a new calendar object and assign it to each element in the array
+         */
+        for (int i = 0; i < calendars.length; i++)
+        {
+            calendars[i] = new GregorianCalendar(2021, i + 1, 1);
+        }
+        
+        for(GregorianCalendar calendar : calendars)
+        {
+            System.out.println(calendar);
+        }
     }
     
     
