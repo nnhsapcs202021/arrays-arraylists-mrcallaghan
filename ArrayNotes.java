@@ -145,6 +145,23 @@ public class ArrayNotes
         {
             System.out.println(calendar);
         }
+        
+        
+        /*
+         * An enhanced for loop cannot modify the values of the elements in the array (e.g., 
+         *      references to calendars), but we can call mutator methods which modify the
+         *      properties of the referenced objects (e.g., day of the month).
+         */
+        
+        for(GregorianCalendar calendar : calendars)
+        {
+            calendar.add(GregorianCalendar.DAY_OF_MONTH, 2);
+        }
+        
+        for(GregorianCalendar calendar : calendars)
+        {
+            System.out.println(calendar);
+        }
     }
     
     
