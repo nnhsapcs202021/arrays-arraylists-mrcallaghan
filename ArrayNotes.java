@@ -164,8 +164,33 @@ public class ArrayNotes
         }
     }
     
+    /*
+     * 2. Shift all elements by one to the right and move the last element into
+     *      the first position. For example, 1 4 9 16 25 would be transformed into
+     *      25 1 4 9 16.
+     */
+    public static void shiftRight()
+    {
+        int[] nums = {1, 4, 9, 16, 25};
+        
+        int temp = nums[nums.length - 1];
+        
+        for (int i = nums.length - 1; i > 0; i--)
+        {
+            nums[i] = nums[i - 1];  // assign the element to the left to i
+        }
+        
+        nums[0] = temp;
+        
+        for(int i : nums)
+        {
+            System.out.print(i);
+        
+        }
+        
     
     
+    }
     
     
     
