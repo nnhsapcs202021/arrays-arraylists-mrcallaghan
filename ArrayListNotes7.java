@@ -1,13 +1,14 @@
 import java.util.ArrayList;
 
 /**
- * Write a description of class ArrayListNotes here.
+ * Write a description of class ArrayListNotes7 here.
  *
  * @author mrcallaghan
  * @version 05feb2021
  */
-public class ArrayListNotes
+public class ArrayListNotes7
 {
+    
     public static void main(String[] args)
     {
         /*
@@ -17,7 +18,7 @@ public class ArrayListNotes
          *      (i.e. < >) after every ArrayList identifier.
          *      
          * Primitives (e.g., int, double, boolean) are not classes and cannot be specified
-         *      as the type of the elements in a Generic. Instead, we use the corresponding
+         *      as the type of the elements in a Generic.  Instead, we use the corresponding
          *      Wrapper Classes (e.g., Integer, Double, Boolean).
          */
         
@@ -27,25 +28,26 @@ public class ArrayListNotes
         removeEvens(myList);
         System.out.println(myList);
         System.out.println(sumList(myList));
+        
     }
+    
     
     /**
      * Creates and returns a reference to an ArrayList of the specified number of
      *      Integer elements where each element is assigned a random value between
      *      1 and range.
-     *      
-     *  @param size     the number of Integer elements to add to the list
-     *  @param range    the range of random values to assign to each element [1, range]
-     *  
-     *  @return a reference to the newly created and initialized list
+     * 
+     * @param size     the number of Integer elements to add to the list
+     * @param range    the range of random values to assign to each element [1, range]
+     * 
+     * @return a reference to the newly created and initialized list
      */
     public static ArrayList<Integer> createRandomIntegerList(int size, int range)
     {
         ArrayList<Integer> list = new ArrayList<Integer>();
-        
         for(int i = 0; i < size; i++)
         {
-            int value = (int)(Math.random() * range) + 1;
+            int value = (int)(Math.random() * range) +1;
             
             /*
              * The add method adds the specified object to the end of the list.
@@ -55,9 +57,13 @@ public class ArrayListNotes
              *          wrapper class. However, type promotion does not occur.
              */
             list.add(value);
+            
         }
+
         
         return list;
+    
+        
     }
     
     /**
@@ -70,6 +76,8 @@ public class ArrayListNotes
         /*
          * The size method returns the number of elements in the list.
          */
+        //int size = list.size();
+        
         for (int i = 0; i < list.size(); i++)
         {
             /*
@@ -79,20 +87,18 @@ public class ArrayListNotes
             
             if(value % 2 == 0)
             {
+                
                 /*
                  * The remove method deletes the element at the specified index
                  *      from the list. All subsequent elements are "shifted left".
                  */
                 list.remove(i);
                 i--;
-            }
             
+            }
         }
         
-        
-    
     }
-    
     
     public static void removeEvensAlt(ArrayList<Integer> list)
     {
@@ -105,22 +111,22 @@ public class ArrayListNotes
         }
     }
     
+    
     public static int sumList(ArrayList<Integer> list)
     {
         int sum = 0;
         
-        /*
-         * Enhanced for loops support iterating through ArrayList.
-         */
-        for( int value : list )
+        for(int value : list)
         {
             sum += value;
             
-        
         }
-       
-        return sum;
         
+        
+        return sum;
     }
-     
+    
+    
+    
+    
 }
